@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  web:
+    env_file:
+      - web-variables.env
+    image: infracloudio/csvserver
+    ports:
+      - "9393:9300"
+    volumes:
+      - /home/ubuntu/inputdata:/csvserver/inputdata
